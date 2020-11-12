@@ -1,6 +1,9 @@
 class PrecoUtils {
   static String limpaStringPreco(String preco) =>
-      preco.replaceAll('R\$', '').replaceAll('.', '').replaceAll(',', '.')..trim();
+      preco.replaceAll('R\$', '').replaceAll('.', '').replaceAll(',', '.')
+        ..trim();
+
+  static String precoDoubleToString(double preco) => 'R\$ $preco';
 
   static String limpaStringDesconto(String preco) =>
       preco.replaceAll('%', '').replaceAll('.', '').replaceAll(',', '.').trim();
