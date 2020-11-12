@@ -3,7 +3,7 @@ class PrecoUtils {
       preco.replaceAll('R\$', '').replaceAll('.', '').replaceAll(',', '.')
         ..trim();
 
-  static String precoDoubleToString(double preco) => 'R\$ $preco';
+  static String precoToString(String preco) => 'R\$ $preco';
 
   static String limpaStringDesconto(String preco) =>
       preco.replaceAll('%', '').replaceAll('.', '').replaceAll(',', '.').trim();
