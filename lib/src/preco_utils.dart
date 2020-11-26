@@ -1,3 +1,5 @@
+import 'package:intl/intl.dart';
+
 class PrecoUtils {
   static String limpaStringPreco(String preco) =>
       preco.replaceAll('R\$', '').replaceAll('.', '').replaceAll(',', '.')
@@ -13,4 +15,8 @@ class PrecoUtils {
       .replaceAll(',', '')
       .replaceAll('.', '')
       .trim());
+
+  static String numeroToPreco(String preco) =>
+      NumberFormat.currency(locale: 'pt_BR', symbol: 'R\$', decimalDigits: 2)
+          .format(double.parse(preco));
 }
